@@ -19,7 +19,15 @@ class Settings extends Model
     'directions_button_text',
   ];
 
-  public $rules = [];
+  public $rules = [
+    'api_key' => 'required',
+    'latitude' => 'required',
+    'longtitude' => 'required',
+    'height' => 'required',
+    'width' => 'required',
+    'zoom' => 'required',
+    'map_type' => 'required'
+  ];
 
   // A unique code
   public $settingsCode = 'google_maps_settings';
@@ -45,7 +53,7 @@ class Settings extends Model
         list($width, $height) = getimagesize($filename);
         if ($height > 100) {
             throw new ValidationException(['marker_image' => 'Marker image height must be smaller than 50px']);
-        }  
+        }
       }
   }
 }
