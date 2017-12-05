@@ -40,10 +40,12 @@ class Settings extends Model
 
   public function beforeValidate(){
       $file = $this->marker_image()->withDeferred($this->sessionKey)->first();
-      $filename = $file->getLocalPath();
-      list($width, $height) = getimagesize($filename);
-      if ($height > 100) {
-          throw new ValidationException(['marker_image' => 'Marker image height must be smaller than 50px']);
+      if($file){
+        $filename = $file->getLocalPath();
+        list($width, $height) = getimagesize($filename);
+        if ($height > 100) {
+            throw new ValidationException(['marker_image' => 'Marker image height must be smaller than 50px']);
+        }  
       }
   }
 }
