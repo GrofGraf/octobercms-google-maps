@@ -17,22 +17,21 @@ This plugin creates a Settings menu item, found by navigating to **Settings > Go
 
 `Marker Image` and `Directions Button Text` are optional fields. If you leave `Marker Image` field empty, default marker will be displayed.
 
-For directions button to work, you must have the following requirements met:
- * `Show Marker` option enabled
- * secure origin such as HTTPS
+For directions button to work, your website must have a secure origin such as HTTPS.
 
 If [Translate](https://octobercms.com/plugin/rainlab-translate) is enabled, `Directions Button Text` is translatable.
 
 ## Usage
 To use this plugin, first you must fill all the required settings. You can put the map on any front-end page. Add the `googleMap Component` to a page or layout.
 
-The simplest way to add the map is to use the component's default partial and the `{% component %}` tag. Add it to a page or layout where you want to display the form:
+The simplest way to add the map is to use the component's default partial and the `{% component %}` tag. Add it to a page or layout where you want to display the map:
 
     {% component 'googleMap' %}
 
 If you want to add `Get Directions` button, you can include a component's partial located in the `plugins/grofgraf/googlemaps/components/googlemap/directions-button.htm` by adding
 
     {% partial 'googleMap::directions-button' %}
+> Note that directions will only work if your website has a secure origin such as HTTPS
 
 ## Authors
 
