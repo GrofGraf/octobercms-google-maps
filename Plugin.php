@@ -51,7 +51,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'GrofGraf\GoogleMaps\Components\googleMap' => 'googleMap',
+            'GrofGraf\GoogleMaps\Components\GoogleMap' => 'googleMap',
         ];
     }
 

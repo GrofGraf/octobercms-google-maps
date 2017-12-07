@@ -1,3 +1,5 @@
 1.0.1: First version of GoogleMaps
 1.0.2:
-  - added backend form validation
+  - Added backend form validation
+  - Settigns devided into categories
+  - Added default values

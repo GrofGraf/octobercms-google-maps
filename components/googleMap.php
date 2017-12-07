@@ -3,7 +3,7 @@
 use Cms\Classes\ComponentBase;
 use GrofGraf\GoogleMaps\Models\Settings;
 
-class googleMap extends ComponentBase
+class GoogleMap extends ComponentBase
 {
     public function componentDetails()
     {
@@ -24,13 +24,13 @@ class googleMap extends ComponentBase
         $marker_image = Settings::instance()->get_marker_image()->path;
       }
       $this->page['map'] = [
-        'height' => Settings::get('height'),
-        'width' => Settings::get('width'),
-        'latitude' => Settings::get('latitude'),
-        'longtitude' => Settings::get('longtitude'),
-        'zoom' => Settings::get('zoom'),
-        'type' => Settings::get('map_type'),
-        'show_marker' => Settings::get('show_marker'),
+        'height' => Settings::get('height') ?: "400px",
+        'width' => Settings::get('width') ?: "100%",
+        'latitude' => Settings::get('latitude') ?: 53.350140,
+        'longtitude' => Settings::get('longtitude') ?: -6.266155,
+        'zoom' => Settings::get('zoom') ?: 15,
+        'type' => Settings::get('map_type') ?: "roadmap",
+        'show_marker' => Settings::get('show_marker') ?: 1,
         'marker_image' => $marker_image
       ];
       $this->addJs('assets/js/main.js');
