@@ -98,7 +98,8 @@ class Plugin extends PluginBase
               'category'    => 'Google Maps',
               'icon'        => 'icon-map',
               'class'       => 'GrofGraf\GoogleMaps\Models\Settings',
-              'order'       => 100
+              'order'       => 100,
+              'permissions' => ['grofgraf.googlemaps.settings']
           ]
       ];
     }
