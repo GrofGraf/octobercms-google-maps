@@ -5,3 +5,5 @@
   - Added default values
 1.0.3:
   - Component namespace error fixed
+1.0.4:
+  - Registered permission

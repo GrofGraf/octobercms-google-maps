@@ -62,12 +62,10 @@ class Plugin extends PluginBase
      */
     public function registerPermissions()
     {
-        return []; // Remove this line to activate
-
         return [
             'grofgraf.googlemaps.some_permission' => [
                 'tab' => 'GoogleMaps',
-                'label' => 'Some permission'
+                'label' => 'Manage google maps settings'
             ],
         ];
     }
